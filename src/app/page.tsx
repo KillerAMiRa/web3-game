@@ -3,6 +3,9 @@
 import { useConnect, useConnection, useConnectors, useDisconnect } from 'wagmi'
 import { Button } from 'antd'
 import { useEffect, useState } from 'react'
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+import Head from 'next/head';
+import TodoList from './todo';
 
 function App() {
   let ranks = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
@@ -22,6 +25,17 @@ function App() {
 
   return (
     <>
+
+      {/* <Head>
+        <title>TODO List with Next.js and Zustand</title>
+        <meta name="description" content="A simple TODO list app" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head> */}
+
+      <ConnectButton />
+      <main>
+        <TodoList />
+      </main>
       <div className="p-2">
         <div className="flex flex-wrap">
           {deck.slice(0, 3).map((card: any, index: any) => (
