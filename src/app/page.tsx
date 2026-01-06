@@ -4,7 +4,8 @@ import { useConnect, useConnection, useConnectors, useDisconnect } from 'wagmi'
 import { Button } from 'antd'
 import { useEffect, useState } from 'react'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import Head from 'next/head';
+// import Head from 'next/head';
+import Index from "./news/[id]/index";
 import TodoList from './todo';
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <>
-
+      <Index />
       {/* <Head>
         <title>TODO List with Next.js and Zustand</title>
         <meta name="description" content="A simple TODO list app" />
