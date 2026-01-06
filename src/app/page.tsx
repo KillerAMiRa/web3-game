@@ -26,17 +26,18 @@ function App() {
 
   return (
     <>
-      <Index />
       {/* <Head>
         <title>TODO List with Next.js and Zustand</title>
         <meta name="description" content="A simple TODO list app" />
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
 
-      <ConnectButton />
-      <main>
-        <TodoList />
-      </main>
+      <div className="flex justify-center m-2">
+        <ConnectButton />
+      </div>
+      <TodoList />
+      <Index />
+
       <div className="p-2">
         <div className="flex flex-wrap">
           {deck.slice(0, 3).map((card: any, index: any) => (
@@ -48,11 +49,10 @@ function App() {
           ))}
         </div>
       </div>
-      <div className="p-2">2</div>
-      <div>
-        <Button type="primary">Button</Button>
-        <Button type="primary">Button</Button>
-        <Button type="primary">Button</Button>
+      <div className="p-2">
+        <Button type="primary">Button</Button> &nbsp;
+        <Button type="primary">Button</Button> &nbsp;
+        <Button type="primary">Button</Button> &nbsp;
       </div>
       <hr />
       <div className="p-2">
