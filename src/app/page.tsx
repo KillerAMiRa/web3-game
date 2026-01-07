@@ -26,12 +26,6 @@ function App() {
 
   return (
     <>
-      {/* <Head>
-        <title>TODO List with Next.js and Zustand</title>
-        <meta name="description" content="A simple TODO list app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
-
       <div className="flex justify-center m-2">
         <ConnectButton />
       </div>
@@ -67,22 +61,23 @@ function App() {
         </div>
 
         {connection.status === 'connected' && (
-          <button type="button" onClick={() => disconnect()}>
+          <Button type="primary" danger onClick={() => disconnect()}>
             Disconnect
-          </button>
+          </Button>
         )}
       </div>
 
-      <div>
+      <div className="p-2">
         <h2>Connect</h2>
         {connectors.map((connector) => (
-          <button
+          <Button
             key={connector.uid}
             onClick={() => connect({ connector })}
-            type="button"
+            type="primary"
           >
             {connector.name}
-          </button>
+          </Button>
+          // <Button type="primary">{connector.name}</Button> &nbsp;
         ))}
         <div>{status}</div>
         <div>{error?.message}</div>
