@@ -5,8 +5,8 @@ import {
   useWaitForTransactionReceipt,
 } from "wagmi";
 import { getTestTokenContract } from "@/utils/contractHelpers";
-import { Abi, Address, BaseError } from "viem";
 import { waitForTransactionReceipt } from "@/utils";
+import { Abi, Address, BaseError } from "viem";
 import { useState } from "react";
 
 // read example
