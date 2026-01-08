@@ -7,6 +7,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 // import Head from 'next/head';
 import Index from "./news/[id]/index";
 import TodoList from './todo';
+import Send from '@/app/hooks/send'
 
 function App() {
   let ranks = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
@@ -29,6 +30,7 @@ function App() {
       <div className="flex justify-center m-2">
         <ConnectButton />
       </div>
+      <Send />
       <TodoList />
       <Index />
 
