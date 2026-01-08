@@ -2,7 +2,7 @@
 
 import { useConnect, useConnection, useConnectors, useDisconnect } from 'wagmi'
 import { Button } from 'antd'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 // import Head from 'next/head';
 import Index from "./news/[id]/index";
