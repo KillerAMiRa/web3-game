@@ -1,5 +1,6 @@
 // src/app/news/[id]/page.tsx
 import { getAllNewsIds, getNewsById } from '@/lib/news';
+import { Button } from "@/components/ui/button"
 
 // 🔴 ISR 核心配置：30 秒重新验证一次
 export const revalidate = 30;
@@ -28,6 +29,7 @@ export default async function NewsPage({ params }: { params: { id: string } }) {
       <div style={{ marginTop: '2rem', paddingTop: '1rem', borderTop: '1px solid #eee' }}>
         <p style={{ color: '#999' }}>ISR 配置：每 30 秒自动更新数据</p>
       </div>
+      <Button>Click me</Button>
     </main>
   );
 }

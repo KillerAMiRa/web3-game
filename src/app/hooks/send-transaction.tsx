@@ -29,7 +29,7 @@ export function SendTransaction() {
     })
 
   return (
-    <form onSubmit={submit} className='p-2 bg-pink-200'>
+    <form onSubmit={submit} className='m-2 p-2 bg-pink-200'>
       <input name="address" placeholder="0xA0Cf…251e" className='mr-2' required />
       <input name="value" placeholder="0.05" className='mr-2' required />
       <button
