@@ -4,6 +4,7 @@ import { useConnect, useConnection, useConnectors, useDisconnect } from 'wagmi'
 import { Button } from 'antd'
 import { useEffect, useState, Suspense } from 'react'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { useImmer } from 'use-immer';
 // import Head from 'next/head';
 import Index from "./news/[id]/index";
 import TodoList from './todo';
@@ -16,6 +17,23 @@ function App() {
   // console.log('🚀 - init:', init)
 
   let [deck, setDeck] = useState<any>([])
+  const [ todos, updateTodos ] = useImmer([
+    { id: 1, text: 'Learn React', done: false }
+  ])
+
+  // 添加任务
+  // updateTodos((draft) => {
+  //   draft.push( { id: 2, text: 'Learn Immer', done: false } )
+  // })
+
+  // // 标记完成
+  // updateTodos((draft) => {
+  //   const todo = draft.find(item => item.id === 1)
+  //   if(todo) todo.done = true
+  // })
+  console.log('🚀 - todos:', todos)
+  console.log('🚀 - 1:', init)
+
   useEffect(() => {
     setDeck(init)
   }, [])
