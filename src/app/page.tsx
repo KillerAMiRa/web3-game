@@ -31,8 +31,8 @@ function App() {
   //   const todo = draft.find(item => item.id === 1)
   //   if(todo) todo.done = true
   // })
-  console.log('🚀 - todos:', todos)
-  console.log('🚀 - 1:', init)
+  // console.log('🚀 - todos:', todos)
+  // console.log('🚀 - 1:', init)
 
   useEffect(() => {
     setDeck(init)
