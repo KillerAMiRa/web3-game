@@ -100,7 +100,7 @@ export function TradePanel() {
 
       {/* 交易信息提示 */}
       <div className="trade-info">
-        <p>滑点：{slippage}%</p>
+        <p>滑点 ：{slippage}%</p>
         <p>手续费：{fee} {currentPair.quote}</p>
         <p>预计成交：{amount && price ? (Number(amount) * Number(price)).toFixed(4) : 0} {currentPair.quote}</p>
       </div>
