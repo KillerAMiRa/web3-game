@@ -1,6 +1,6 @@
 // app/users/[id]/page.tsx
 'use client'; // 标记为客户端组件，支持交互
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { User } from '@/types';
 
@@ -11,7 +11,7 @@ export default function UserDetail() {
   const [loading, setLoading] = useState(true);
 
   // 客户端请求数据
-  useState(() => {
+  useEffect(() => {
     const fetchUser = async () => {
       const res = await fetch(`https://api.example.com/users/${userId}`);
       const data = await res.json();
@@ -20,6 +20,17 @@ export default function UserDetail() {
     };
     fetchUser();
   }, [userId]);
+  // ----
+  // useEffect(() => {
+  //   fetchUser(userId)
+  // }, [userId])
+
+  // const fetchUser = async (userId) => {
+  //     const res = await fetch(`https://api.example.com/users/${userId}`);
+  //     const data = await res.json();
+  //     setUser(data);
+  //     setLoading(false);
+  //   };
 
   if (loading) return <div className="skeleton h-64 w-full"></div>;
   if (!user) return <div className="text-red-500">用户不存在</div>;
