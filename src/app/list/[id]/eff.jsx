@@ -17,7 +17,7 @@ export default function App() {
     backgroundColor: "teal",
     color: "white"
   };
-
+  // anfn nfn rfc
   const memoizedStyle = useMemo(() => {
     return {
       backgroundColor: "red",
